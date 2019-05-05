@@ -51,23 +51,26 @@ $$
 
 4. O $|k|=4$ é coberto pelas repetições de (1) e (2)
 $$
-tam(U)=q^4 - tam(U para |k|=2) - tam(U para |k|=1) 
-      =q^4 - q^2 - q
+tam(U) = q^4 - tam(U para |k|=2) - tam(U para |k|=1) 
+       = q^4 - q^2 - q
 $$
 
 Escrevendo de forma genérica:
 
 $$
-q^{|k|} - (\sum{(q^i)}, \forall i \in P))
+tam(U) = q^{|k|} - (\sum{(q^i)}, \forall i \in P))
 $$
 
-onde P compreende os divisores inteiros de |k| menores que |k|
+onde P compreende os divisores inteiros de |k| menores que |k|.
+
+Usando apenas palavras contidas em um dicionário, esse
 
 ## Ex 3
 
 Uma vulnerabilidade da cifra de deslocamento é que, para uma dada chave, cada caractere da entrada é sempre cifrado com o mesmo símbolo, possiblitando ataques de frequência.
 
 ## Ex 4
+## Ex 5
 
 $$
 p(n=128) = 100 * 1/2 + 1/(2^{32})
@@ -80,13 +83,13 @@ A probabilidade de o adversário derrotar o sistema cairia para
 0.500000000000000000054210109%
 
 
-## Ex 5
+## Ex 6
 ```
-def check_zeros(y: [y0, y1, ..., yn | n > 16])
+def check_zeros(y: [y0, y1, ..., yn | n >= 16])
   for i in 9...16:
     if y[i] == 1:
-      return 0
-  return 1
+      return true
+  return false
   
 ```
 

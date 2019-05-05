@@ -36,12 +36,19 @@ def vigenere_cypher(val, k):
 
 if __name__ == '__main__':
     s = 'privacidadepublicatranparenciaprivada'
+    print('Mensagem cifrada', s)
 
+    print('Cifra de deslocamento com k=3')
     s_cypher = shift_cypher(s, 3)
     print(s_cypher)
+    print()
 
+    print('Cifra de substituição com k=ZEBRASCDFGHIJKLMNOPQTUVWXY')
     s_cypher = sub_cypher(s, 'ZEBRASCDFGHIJKLMNOPQTUVWXY')
     print(s_cypher)
+    print()
 
+    print('Cifra de Vigenere com k=senha')
     s_cypher = vigenere_cypher(s, 'senha')
     print(s_cypher)
+    print()
