@@ -1,9 +1,22 @@
 # Lista 1: Segurança da Informação
 
+Nome: Eder Gabriel da Trindade Félix
+
+NrUsp: 9778515
+
 ## Ex 1
-a) sulydflgdghsxeolfdwudqsduhqfldsulydgd
-b) MOFUZBFRZRAMTEIFBZQOZKMZOAKBFZMOFUZRZ
-c) hvvcaumqhdwthilagnarsrchrwrppahvvcave
+
+### Cifra de deslocamento
+
+sulydflgdghsxeolfdwudqsduhqfldsulydgd
+
+### Cifra de substituição
+
+MOFUZBFRZRAMTEIFBZQOZKMZOAKBFZMOFUZRZ
+
+### Cifra de Vigenere
+
+hvvcaumqhdwthilagnarsrchrwrppahvvcave
 
 ## Ex 2
 
@@ -70,6 +83,10 @@ Usando apenas palavras contidas em um dicionário, esse
 Uma vulnerabilidade da cifra de deslocamento é que, para uma dada chave, cada caractere da entrada é sempre cifrado com o mesmo símbolo, possiblitando ataques de frequência.
 
 ## Ex 4
+
+Nesse algoritmo, o conteúdo da mensagem é crifrado bit-a-bit com a saída de um gerador de números pseudo-aleatório. Geralmente a cifragem é feita pela função booleana XOR.
+Para garantir a segurança, o gerador deve se aproximar de uma função aleatória. Padrões na saída do gerador tornam a cifra vulnerável à criptoanálise.
+
 ## Ex 5
 
 $$
@@ -84,6 +101,7 @@ A probabilidade de o adversário derrotar o sistema cairia para
 
 
 ## Ex 6
+
 ```
 def check_zeros(y: [y0, y1, ..., yn | n >= 16])
   for i in 9...16:
@@ -93,3 +111,11 @@ def check_zeros(y: [y0, y1, ..., yn | n >= 16])
   
 ```
 
+## Ex 7
+
+No modo CTR, o processamento de um bloco é independente dos outros. Logo, o bloco no qual o bit se encontra ficará corrompido, mas o resto da mensagem estará legível.
+No CBC, a descriptografação dos blocos ocorre em sequência, com o processamento de um dados bloco dependendo do resultado do anterior (com exceção do primeiro). Logo, a corrupção de um único bit impede a decodificação da mensagem inteira.
+
+## Ex 8
+
+Não, pois a cifragem de cada bloco é determinística: se houverem dois blocos idênticos na mensagem, eles gerarão o mesmo bloco de cifra, o que torna o algoritmo vulnerável à criptoanálise.
